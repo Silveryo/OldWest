@@ -1,0 +1,22 @@
+﻿@using System.ComponentModel
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model User
+
+@{
+    ViewData["Title"] = "Summary";
+    Layout = "_Layout";
+}
+
+<h2>Summary</h2>
+<div>
+    @foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(Model))
+    {
+        string name = descriptor.Name;
+        object? value = descriptor.GetValue(Model);
+        <p>@name: @value</p>
+    }
+</div>
+
+<form asp-controller="Winner" asp-action="Redirect">
+    <button>Home screen</button>
+</form>
