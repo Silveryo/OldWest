@@ -7,23 +7,31 @@
 
 <h2>Sharpshooter!</h2>
 
-<form asp-controller="Winner" asp-action="HandleSubmit">
-    <label asp-for="FirstName"></label>
-    <input asp-for="FirstName"/>
-    <span asp-validation-for="FirstName"></span>
-
-    <label asp-for="LastName"></label>
-    <input asp-for="LastName"/>
-    <span asp-validation-for="LastName"></span>
-
-    <label asp-for="Email"></label>
-    <input asp-for="Email"/>
-    <span asp-validation-for="Email"></span>
-
-    <label asp-for="Phone"></label>
-    <input asp-for="Phone"/>
-    <span asp-validation-for="Phone"></span>
-
+<form class="epic-form" asp-controller="Winner" asp-action="HandleSubmit">
+    <div class="form-input">
+        <label asp-for="FirstName" hidden></label>
+        <input class="form-input-control" asp-for="FirstName" placeholder="First name"/>
+        <span asp-validation-for="FirstName"></span>
+    </div>
+    <br/>
+    <div class="form-input">
+        <label asp-for="LastName" hidden></label>
+        <input class="form-input-control" asp-for="LastName" placeholder="Last name"/>
+        <span asp-validation-for="LastName"></span>
+    </div>
+    <br/>
+    <div class="form-input">
+        <label asp-for="Email" hidden></label>
+        <input class="form-input-control" asp-for="Email" placeholder="Email"/>
+        <span asp-validation-for="Email"></span>
+    </div>
+    <br/>
+    <div class="form-input">
+        <label asp-for="Phone" hidden></label>
+        <input class="form-input-control" asp-for="Phone" placeholder="Phone"/>
+        <span asp-validation-for="Phone"></span>
+    </div>
+    <br/>
     <label for="submit"></label>
-    <input type="submit" id="submit" value="Submit"/>
+    <input class="cute-button" type="submit" id="submit" value="Submit"/>
 </form>
